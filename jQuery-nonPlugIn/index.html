@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+   <!--jQuery--!>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  	
+  <head>
+    <!-- Meta tag -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <!-- Link tag for CSS -->
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+
+    <!-- Web Page Title -->
+    <title>Tech Talk</title>
+	
+	<!--JQuert-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+	
+	function Slider(){
+		$(".slider #1").show("fade",500);
+		$(".slider #1").delay(5300).hide("slide",{direction:'left'},500);
+		var sc = $(".slider img").size();
+		var count=2;
+		
+		setInterval(function (){
+			$(".slider #"+count).show("slide",{direction: 'right'}, 500);
+			$(".slider #"+count).delay(5300).hide("slide",{direction: 'left'}, 500);
+		
+			if(count == sc){
+				count =1;
+			}else{
+				count = count+1;
+			}
+		},6000);
+	}
+	</script>	
+  </head>
+
+    <body onload="Slider();">
+		<div class="slider">
+			<img id="1" src="devil1.jpg"/>
+			<img id="2" src="devil2.jpg"/>
+			<img id="3" src="devil3.jpg"/>
+			<img id="4" src="devil4.jpg"/>
+			<img id="5" src="devil5.jpg"/>
+			<img id="6" src="devil6.jpg"/>
+		</div>		
+	</div>
+	</body>
+	
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Tech Talk</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	
+<script type="text/javascript">
+var imgcount = 1;
+var total = 6;
+
+function slide(x){
+	var Image = document.getElementById('img');
+	imgcount = imgcount + x;
+	if(imgcount > total){imgcount = 1;}
+	if(imgcount < 1){imgcount = total;}
+	Image.src = "Images/devil" + imgcount + ".jpg";
+}
+
+window.setInterval(function slideAutomation(){
+	var Image = document.getElementById('img');
+	imgcount = imgcount + 1;
+	if(imgcount > total){imgcount = 1;}
+	if(imgcount < 1){imgcount = total;}
+	Image.src = "Images/devil" + imgcount + ".jpg";
+},3000);
+</script>	
+</head>
+
+<body onload="slideAutomation()">
+
+<div id="slider">
+	
+			<div class="items">
+				<img id="img" src="Images/devil1.jpg"/>
+					<div class="info">
+						<h2>Arizona State University!</h2>
+						<p>Sparky is with us!</p>
+					</div>
+			</div>
+			
+			<div class="items">
+				<img id="img" src="Images/devil2.jpg"/>
+			</div>
+			
+			<div class="items">
+				<img id="img" src="Images/devil3.jpg"/>
+			</div>
+			
+			<div class="items">
+				<img id="img" src="Images/devil4.jpg"/>
+			</div>
+			
+			<div class="items">
+				<img id="img" src="Images/devil5.jpg"/>
+			</div>
+			
+			<div class="items">
+				<img id="img" src="Images/devil6.jpg"/>
+			</div>
+			
+		<div id="left"><img onclick="slide(-1)" class="leftarrow" src="leftarrow.jpg"/></div>
+		<div id="right"><img onclick="slide(1)" class="rightarrow" src="rightarrow.jpg"/></div>
+	
+		</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
